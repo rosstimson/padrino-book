@@ -37,11 +37,16 @@ For any non-Ruby people, I strongly advise you to check out one of these books a
 continuing here.
 
 
-- [Programming Ruby](http://pragprog.com/book/ruby3/programming-ruby-1-9 "Programming Ruby") - the
-  standard book on Ruby.
+- [Programming Ruby](http://pragprog.com/book/ruby3/programming-ruby-1-9 "Programming Ruby") - the book on every
+  Rubyists desk, a.k.a. the pickaxe book.
 - [Poignant Guide to Ruby](http://www.scribd.com/doc/8545174/Whys-Poignant-Guide-to-Ruby "Poignant Guide To Ruby") -
   written by the nebulous programmer [why the lucky stiff](http://en.wikipedia.org/wiki/Why_the_lucky_stiff "Stiff") in
-  a entertaining and educational way.
+  possibly the strangest and most entertaining programming book you'll ever encounter.
+- [Learn Ruby the Hard Way](http://ruby.learncodethehardway.org "Learn Ruby the Hard Way") - available online with each
+  chapter containing short practical exercises to help you learn.
+- [Learn to Program](http://pine.fm/LearnToProgram "Learn to Program") - a general learning to program book for
+  beginners which just happens to use Ruby.  It is published by Pragmatic Programmers but is also available to read
+  online.
 
 
 In this book, I assume readers having Ruby knowledge and will not be explaining every last detail. I will, however,
