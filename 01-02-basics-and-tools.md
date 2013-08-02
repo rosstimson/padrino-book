@@ -5,8 +5,8 @@ I won't tell you which operating system you should use - there is an interesting
 this book to learn Padrino not to be preached at about operating systems.
 
 
-To actually see a running padrino app, you need a web browser of your choice.  For writing the application, you can
-either use an Integrated Development Environment (IDE) or with a plain text editor.
+To actually see a running Padrino app, you need a web browser of your choice.  For writing the application, you can
+either use an Integrated Development Environment (IDE) or use a plain text editor.
 
 
 Nowadays there are a bunch of Integrated Development Environments (IDEs) out there:
@@ -28,7 +28,7 @@ Here is a list of plain text editors which are a popular choice among Ruby devel
 
 
 All tools have their strengths and weaknesses. Try to find the software that works best for you. The main goal is that
-you comfortable because you will spend a lot of time with it.
+you are comfortable because you will spend a lot of time with it.
 
 
 **Ruby Knowledge**
@@ -45,6 +45,6 @@ continuing here.
 
 
 In this book, I assume readers having Ruby knowledge and will not be explaining every last detail. I will, however,
-explain Padrino-specific coding techniques and how to get most parts under test.
+explain Padrino specific coding techniques and how to get most of your code covered by tests.
 
 %%/* vim: set ts=2 sw=2 textwidth=120: */
