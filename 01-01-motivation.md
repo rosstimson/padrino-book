@@ -12,12 +12,12 @@ yourself as we build two different applications throughout this book.
 
 ### Why Padrino With The Developer Point of View
 
-Nothing is enabled without explicit choice. You as a programmer know what database is best for your application, which
-Gems don't carry security issues. If you are honest to yourself you can only learn a framework by heart if you go and
-digg under the hood. Because Padrino is so small it is easy to go through the code to understand most of the source.
-There is no need for monkey-patching, almost everything can be changed via an API. Padrino is rack-friendly, so a lot of
-techniques that are common to Ruby can be reused.  Having a low stack frame makes it easier for debugging.  The best
-Rails convenience parts like `I18n` and `active_support` are available for you.
+Nothing is enabled without explicit choice. You, as a programmer, know what database is best for your application, and which
+gems don't have security vulnerabilities. If you are honest with yourself you can only truly learn a framework if you go and
+tinker under the hood. Because Padrino is so small it is easy to go through the code to understand most of the source.
+There is no need for monkey-patching, almost everything can be changed via an API. Padrino is Rack friendly, so a lot of
+techniques that are common to Ruby can be reused.  Having a low stack frame makes it easier to debug.  The best
+Rails conveniences such as `I18n` and `active_support` are available to you.
 
 
 ### Why Padrino In A Human Way?
