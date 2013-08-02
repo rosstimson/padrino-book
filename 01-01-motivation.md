@@ -6,8 +6,8 @@ the Padrino's web page [padrinorb.com](http://www.padrinorb.com/).
 
 
 Although Padrino borrows many ideas and techniques from it's big brother [Rails](http://rubyonrails.org/) it aims to be
-more modular and allows you to interchange various components with considerable ease. You will see this when you will
-the creation of two different application we are going to build throughout the book.
+more modular and allows you to interchange various components with considerable ease. You will see this modularity for
+yourself as we build two different applications throughout this book.
 
 
 ### Why Padrino With The Developer Point of View
