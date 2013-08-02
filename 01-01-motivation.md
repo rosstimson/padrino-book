@@ -12,18 +12,18 @@ yourself as we build two different applications throughout this book.
 
 ### Why Padrino With The Developer Point of View
 
-Nothing is enabled without explicit choice. You, as a programmer, know what database is best for your application, and which
-gems don't have security vulnerabilities. If you are honest with yourself you can only truly learn a framework if you go and
-tinker under the hood. Because Padrino is so small it is easy to go through the code to understand most of the source.
-There is no need for monkey-patching, almost everything can be changed via an API. Padrino is Rack friendly, so a lot of
-techniques that are common to Ruby can be reused.  Having a low stack frame makes it easier to debug.  The best
-Rails conveniences such as `I18n` and `active_support` are available to you.
+Nothing is enabled without explicit choice. You, as a programmer, know what database is best for your application, and
+which gems don't have security vulnerabilities. If you are honest with yourself you can only truly learn a framework if
+you go and tinker under the hood. Because Padrino is so small it is easy to go through the code to understand most of
+the source. There is no need for monkey-patching, almost everything can be changed via an API. Padrino is Rack friendly,
+so a lot of techniques that are common to Ruby can be reused. Having a low stack frame makes it easier to debug. The
+best Rails conveniences such as `I18n` and `active_support` are available to you.
 
 
 ### Why Padrino In A Human Way?
 
-Before going any further you may ask: Why should you care about learning and using another web framework? Because you
-want something that is *easy to use*, *simple to hack*, and *open to any contribution*. If you've done
+Before going any further you may ask: Why should I care about learning and using yet another web framework? Because you
+want something that is *easy to use*, *simple to hack*, and *open to any contributions*. If you've done
 [Rails](http://rubyonrails.org/) before, you may reach the point where you can't see how things are solved in particular
 order. In other words: There are many layers between you and the core of you application. You want to have the freedom
 to chose which layers you want to use in your application. This freedoms comes with the help of the
@@ -40,14 +40,14 @@ Padrino adds the core values of Rails into Sinatra and gives you the following e
 - `admin interface`: Provides an easy way to view, search, and modify data in your application.
 
 
-When you are starting a new project in Padrino only a few files are created and, when your taking a closer look at them,
-you will see what each part of the code does. Having less files means less code and that is easier to maintain. Less code
-means that your application will run faster.
+When you are starting a new project in Padrino only a few files are created and, when you take a closer look at them,
+you will see immediately what each part of the code does. Having fewer files means less code and that in turn makes it
+easier to maintain. Less code will also help your application to run faster.
 
 
 With the ability to manage different applications, for example: for your blog, your image gallery, or your payment
-cycle; by separating your business logic, you can share data models, session information and the admin interface between
-them without duplicating code.
+gateway; by separating your business logic, you can share data models, session information and the admin interface
+between them without duplicating code.
 
 
 [Remember](https://speakerdeck.com/daddye/padrino-framework-0-dot-11-and-1-dot-0): "**Be tiny. Be fast. Be a Padrino**"
