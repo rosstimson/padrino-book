@@ -1,8 +1,8 @@
 ## Tools and Knowledge
 
 I won't tell you which operating system you should use - there is an interesting discussion on
-[hackernews](http://news.ycombinator.com/item?id=3786674 "hackernews"). I'll leave it free for the reader of this book
-which to use, because basically you are reading this book to learn Padrino.
+[hackernews](http://news.ycombinator.com/item?id=3786674 "hackernews"). I'll leave the choice up to you - you're reading
+this book to learn Padrino not to be preached at about operating systems.
 
 
 To actually see a running padrino app, you need a web browser of your choice.  For writing the application, you can
