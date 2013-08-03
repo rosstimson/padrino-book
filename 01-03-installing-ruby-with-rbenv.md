@@ -1,6 +1,6 @@
 ## Installing Ruby With rbenv
 
-Instead of using the build-in software package for Ruby of your operating system, we will use
+Instead of using the built-in software package for Ruby on your operating system, we will use
 [rbenv](https://github.com/sstephenson/rbenv/ "rbenv") which lets you switch between multiple versions of Ruby.
 
 
@@ -12,11 +12,11 @@ First, we need to use [git](http://git-scm.org) to get the current version of rb
     $ git clone git://github.com/sstephenson/rbenv.git .rbenv
 
 
-In case you shouldn't want to use git, you can also download the latest version as a zip file from
-[Github](http://github.com).
+In case you donn't want to use git, you can also download the latest version as a zip file from
+[Github](https://github.com/sstephenson/rbenv/archive/master.zip).
 
 
-You need to add the directory that contains rbenv to your `$PATH` environment variable.  If you are on Mac, you have to
+You need to add the directory that contains rbenv to your `$PATH` environment variable. If you are on a Mac, you have to
 replace `.bashrc` with `.bash_profile` in all of the following commands):
 
 
@@ -38,8 +38,8 @@ Next, we need to restart our shell to enable the last changes:
     $ exec $SHELL
 
 
-Basically, there are two ways to install different versions of Ruby: You can compile Ruby on your
-own and try to manage the versions and gems on your own, or you use a tool that helps you.
+Basically, there are two ways to install different versions of Ruby. You can compile Ruby on your own and try to manage
+the versions and gems on your own, or you use a tool that helps you.
 
 
 **ruby-build**
@@ -54,7 +54,7 @@ Because we don't want to download and compile different Ruby versions on our own
     $ git clone git://github.com/sstephenson/ruby-build.git
 
 
-If you now run `rbenv install` you can see all the different Ruby version you can install and use for different Ruby
+If you now run `rbenv install` you can see all the different Ruby versions you can install and use for different Ruby
 projects. We are going to install `ruby 1.9.3-p392`:
 
 
@@ -71,7 +71,7 @@ the internal rbenv libraries. The last step is to make Ruby 1.9.3-p392 the curre
     $ rbenv global 1.9.3-p392
 
 
-Check that the correct executable is active by exexuting `ruby -v`. The output should look like:
+Check that the correct executable is active by executing `ruby -v`. The output should look like:
 
 
 {: lang="bash" }
