@@ -41,7 +41,7 @@ continuing here.
   Rubyists desk, a.k.a. the pickaxe book.
 - [Poignant Guide to Ruby](http://www.scribd.com/doc/8545174/Whys-Poignant-Guide-to-Ruby "Poignant Guide To Ruby") -
   written by the nebulous programmer [why the lucky stiff](http://en.wikipedia.org/wiki/Why_the_lucky_stiff "Stiff") in
-  possibly the strangest and most entertaining programming book you'll ever encounter.
+  an entertaining and educational way.
 - [Learn Ruby the Hard Way](http://ruby.learncodethehardway.org "Learn Ruby the Hard Way") - available online with each
   chapter containing short practical exercises to help you learn.
 - [Learn to Program](http://pine.fm/LearnToProgram "Learn to Program") - a general learning to program book for

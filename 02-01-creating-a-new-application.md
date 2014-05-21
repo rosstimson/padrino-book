@@ -202,15 +202,15 @@ app. Let's change this and define the *about*, *contact*, and *home* actions:
 
     JobVacancy:.App.controllers :page do
       get :about, :map => '/about' do
-        render :erb, 'page/about'
+        render :erb, 'about'
       end
 
       get :contact , :map => '/contact' do
-        render :erb, 'page/contact'
+        render :erb, 'contact'
       end
 
       get :home, :map => '/' do
-        render :erb, 'page/home'
+        render :erb, 'home'
       end
 
     end
@@ -227,7 +227,8 @@ We will go through each line:
   action (in the form of a Ruby symbol[^symbol]), and is finally mapped to the explicit URL */about*. When you start
   your server with `bundle exec padrino s` and visit the URL `http.//localhost:3000/about`, you can see the rendered
   output of this request.
-- `render :erb, 'page/about'` - This action tells us that we want to render an the *erb* file *page/about*. This file is
+- `render :erb, 'about'` - This action tells us that we want to render an the *erb* file *about* for the corresponding
+  controller which is `page` in our case. This file is
   actually located at `app/views/page/about.erb` file. Normally the views are placed under
   *app/views/<controller-name>/<action-name>.<ending>*  Instead of using an ERB templates, you could also use `:haml`,
   or another template language. If you are lazy, you can leave the option for the rendering option completely out and
@@ -253,7 +254,7 @@ To see what routes you have defined for your app just call `padrino rake routes`
     (:page, :home)         GET    /
 
 
-This command crawls through your app looking for delicious routes and gives you a nice overview about **URL,
+This command crawls through your app looking for any existing routes and gives you a nice overview of the **URL (:controller, :explicit_url),
 REQUEST**, and **PATH**.
 
 
@@ -298,11 +299,15 @@ Thanks to [@arthur_chiu](http://twitter.com/#!/arthur_chiu "@arthur_chiu"), we u
 
       apply  https://github.com/padrino/padrino-recipes/raw/master/plugins/bootstrap_plugin.rb
       create    public/stylesheets/bootstrap.css
-      create    public/stylesheets/bootstrap-responsive.css
+      create    public/stylesheets/bootstrap-theme.css
       create    public/javascripts/bootstrap.js
       create    public/javascripts/bootstrap.min.js
-      create    public/images/glyphicons-halflings.png
-      create    public/images/glyphicons-halflings-white.png
+      create    public/javascripts/jquery.js
+      create    public/javascripts/jquery-ujs.js
+      create    public/fonts/glyphicons-halflings-regular.eot
+      create    public/fonts/glyphicons-halflings-regular.svg
+      create    public/fonts/glyphicons-halflings-regular.ttf
+      create    public/fonts/glyphicons-halflings-regular.woff
 
 
 Next we need to include the style sheet in our app template for the whole app:
@@ -313,7 +318,7 @@ Next we need to include the style sheet in our app template for the whole app:
     <html lang="en-US">
       <head>
         <title>Job Vacancy - find the best jobs</title>
-        <%= stylesheet_link_tag 'bootstrap', 'bootstrap-responsive' %>
+        <%= stylesheet_link_tag 'bootstrap', 'bootstrap-theme' %>
         <%= javascript_include_tag 'bootstrap.min', 'jquery', 'jquery-ujs' %>
       </head>
       <body>
@@ -346,13 +351,12 @@ To implement Sprockets in Padrino there the following strategies:
   way.
 
 
-We are using the **padrino-sprockets** gem. Let's add it to our Gemfile:
+We are using the **padrino-sprockets** gem. Let's add it to our Gemfile and run `bundle install`:
 
 
 {: lang="ruby" }
     # Gemfile
     gem 'padrino-sprockets', :require => ['padrino/sprockets'], :git => 'git://github.com/nightsailer/padrino-sprockets.git'
-
 
 Next we need to move all our assets from the public folder in the assets folder:
 
@@ -360,10 +364,8 @@ Next we need to move all our assets from the public folder in the assets folder:
 {: lang="bash" }
     $ cd <path-to-your-padrino-app>
     $ mkdir -p app/assets
-    $ mv public/javascript app/assets
-    $ mv public/stylesheets app/assets
-    $ mv public/images app/assets
-
+    $ cd public
+    $ mv -v fonts images javascripts stylesheets ../app/assets
 
 Now we have to register Padrino-Sprockets in this application:
 
@@ -380,7 +382,7 @@ Now we have to register Padrino-Sprockets in this application:
     end
 
 
-Next we need to determine the order of the loaded CSS files:
+Next we need create an application.css file and add the following to determine the order of the loaded CSS files:
 
 
 {: lang="ruby" }
@@ -395,12 +397,12 @@ Next we need to determine the order of the loaded CSS files:
      *
      *= require_self
      *= require bootstrap
-     *= require bootstrap-responsive
+     *= require bootstrap-theme
      *= require site
     */
 
 
-First we are loading the `bootstrap` default css, then `bootstrap-response`, and finally our customized `site` CSS. The
+First we are loading the `bootstrap` default css, then `bootstrap-theme`, and finally our customized `site` CSS. The
 `require_self` loads the file itself, to define the order that the files are loaded. This is helpful if you want to
 check the order of the loaded CSS as a comment above your application without ever have to look into the source of it.
 
@@ -477,12 +479,12 @@ relevant actions. All we need is to put links to them in a navigation header for
     <html lang="en-US">
       <head>
         <title>Job Vacancy - find the best jobs</title>
-        <%= stylesheet_link_tag 'bootstrap', 'bootstrap-responsive' %>
+        <%= stylesheet_link_tag 'bootstrap', 'bootstrap-theme' %>
         <%= javascript_include_tag 'bootstrap.min', 'jquery', 'jquery-ujs' %>
         <%= stylesheet_link_tag '/stylesheets/site.css' %>
     </head>
     <body>
-      <div class=="container">
+      <div class="container">
         <div class="row">
           <div class="span12 offset3">
             <span id="header">Job Vacancy Board</span>
@@ -641,8 +643,8 @@ Now let's run the tests with `rspec spec/app/controllers/page_controller_spec.rb
 
 Cool, all tests passed! We didn't exactly use behavior-driven development until now, but will do so in the next parts.
 
-Note: It's possible your tests did not pass due to a Padrino error in which a comma ( , ) was ommited during the initial 
-app generation that looks something like 'NameError: undefined local variable' so check your `spec_helper.rb` file and 
+Note: It's possible your tests did not pass due to a Padrino error in which a comma ( , ) was ommited during the initial
+app generation that looks something like 'NameError: undefined local variable' so check your `spec_helper.rb` file and
 make sure the following matches:
 
     def app(app = nil, &blk) # note the comma right after nil

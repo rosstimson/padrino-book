@@ -22,9 +22,9 @@ best Rails conveniences such as `I18n` and `active_support` are available to you
 
 ### Why Padrino In A Human Way?
 
-Before going any further you may ask: Why should I care about learning and using yet another web framework? Because you
-want something that is *easy to use*, *simple to hack*, and *open to any contributions*. If you've done
-[Rails](http://rubyonrails.org/) before, you may reach the point where you can't see how things are solved in particular
+Before going any further you may ask: Why should you care about learning and using another web framework? Because you
+want something that is *easy to use*, *simple to hack*, and *open to any contribution*. If you've done
+Rails before, you may reach the point where you can't see how things are solved in particular
 order. In other words: There are many layers between you and the core of you application. You want to have the freedom
 to chose which layers you want to use in your application. This freedoms comes with the help of the
 [Sinatra framework](http://www.sinatrarb.com/).
